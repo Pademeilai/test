@@ -1,8 +1,7 @@
 # test
 远程连接测试
-
+10/7
 第一步： 打开git bash；
-
 
 第二步：在git bash 中cd到我们本地项目所在的文件夹地址；
 
@@ -24,5 +23,21 @@
 将代码提交到GitHub
 
 6、输入账号密码搞定。
+
+其他命令：
+（1）查看远程库信息git remote -v
+（2）删除远程库信息git remote rm origin
+
+解决代理超时、报443错误、10054错误
+（3）取消http代理git config --global --unset http.proxy
+（4）取消https代理git config --global --unset https.proxy
+
+git pull无法拉取代码是
+（5）个人令牌的妙用
+
+git退出编辑模式：:wq 回车
+
+10/8
+更新问题
 
 参照文档：https://blog.csdn.net/u011332271/article/details/105320697
