@@ -13,7 +13,8 @@
 
 3、git commit -m 'this is first commit'   提交的文件注释说明，最好说明一下，否则有时候会出错!
 
-4、git remote add origin https://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@github.com/Pademeilai/test.git   本地仓库关联GitHub上的仓库，url的书写格式是：https://令牌@github.com/账号/仓库名.git
+4、git remote add origin https://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@github.com/Pademeilai/test.git   
+本地仓库关联GitHub上的仓库，url的书写格式是：https://令牌@github.com/账号/仓库名.git
 
 5、git push -u origin master 将代码提交到GitHub
 
