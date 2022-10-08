@@ -24,13 +24,19 @@
 
 6、输入账号密码搞定。
 
+
+
 其他命令：
+
+
 （1）查看远程库信息git remote -v
 
 （2）删除远程库信息git remote rm origin
 
 
 解决代理超时、报443错误、10054错误
+
+
 （3）取消http代理git config --global --unset http.proxy
 
 
