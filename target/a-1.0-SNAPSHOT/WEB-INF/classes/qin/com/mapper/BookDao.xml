@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qin.com.mapper.BookDao">
+  <resultMap id="BaseResultMap" type="qin.com.entity.Book">
+    <id column="bookId" jdbcType="INTEGER" property="bookid" />
+    <result column="userId" jdbcType="INTEGER" property="userid" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="share" jdbcType="VARCHAR" property="share" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    bookId, userId, author, `name`, `type`, url, remark,share
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from book
+    where bookId = #{bookid,jdbcType=INTEGER}
+  </select>
+  <select id="selectByshare" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from book
+    where share = 2
+  </select>
+
+  <select id="selectByUserid" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from book
+    where userId = #{userId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByBookid" parameterType="java.lang.Integer" resultType="java.lang.String">
+    select chapter
+    from chapter
+    where bookId = #{bookid,jdbcType=INTEGER} and time = "立即发布" order by array DESC limit 1
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from book
+    where bookId = #{bookid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="bookId" keyProperty="bookid" parameterType="qin.com.entity.Book" useGeneratedKeys="true">
+    insert into book (userId, author, `name`, 
+      `type`, url, remark)
+    values (#{userid,jdbcType=INTEGER}, #{author,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{type,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="bookId" keyProperty="bookid" parameterType="qin.com.entity.Book" useGeneratedKeys="true">
+    insert into book
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="url != null">
+        url,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="author != null">
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null">
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="qin.com.entity.Book">
+    update book
+    <set>
+      <if test="userid != null">
+        userId = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="author != null">
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        `type` = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null">
+        url = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="share != null">
+        share = #{share,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where bookId = #{bookid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="qin.com.entity.Book">
+    update book
+    set userId = #{userid,jdbcType=INTEGER},
+      author = #{author,jdbcType=VARCHAR},
+      `name` = #{name,jdbcType=VARCHAR},
+      `type` = #{type,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR}
+    where bookId = #{bookid,jdbcType=INTEGER}
+  </update>
+  <select id="selectAllBook" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from book where type = #{type jdbcType=VARCHAR}
+  </select>
+  <select id="selectBookTime" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from book
+  </select>
+</mapper>

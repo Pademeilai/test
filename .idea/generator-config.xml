@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PersistentConfig">
+    <option name="historyConfigList">
+      <map>
+        <entry key="admin">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="AdminDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Admin" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="admin" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="admin" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="author">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="AuthorDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Author" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="author" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="author_id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="author" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="book">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="BookDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Book" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="book" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="bookId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="book" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="chapter">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ChapterDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Chapter" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="chapter" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="chapter" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="class">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ClassDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Class" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="class" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="classId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="class" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="comment">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="CommentDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Comment" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="comment" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="commentId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="comment" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="login">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="LoginDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Login" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="login" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="treeId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="login" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="money">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="MoneyDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Money" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="money" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="author" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="money" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="news">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="NewsDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="News" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="news" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="newsId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="news" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="products">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ProductsDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Products" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="products" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="pId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="products" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="reader">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ReaderDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Reader" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="reader" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="readerId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="reader" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="role">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="RoleDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Role" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="role" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="roleId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="role" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="role_tree">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="RoleTreeDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="RoleTree" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="role_tree" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="roleId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="role_tree" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="star">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="StarDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Star" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="star" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="starId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="star" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="tree">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="TreeDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Tree" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="tree" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="treeId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="tree" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="user">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="UserDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="User" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="user" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="userId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="user" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="user_role">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="UserRoleDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="UserRole" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="user_role" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="userId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="user_role" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="viewnews">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ViewnewsDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Viewnews" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="viewnews" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="userId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="viewnews" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="viewwork">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ViewworkDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Viewwork" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="viewwork" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="userId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="viewwork" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="webmasteruser">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="WebmasteruserDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Webmasteruser" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="webmasteruser" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="webmasterId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="webmasteruser" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="work">
+          <value>
+            <Config>
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="WorkDao" />
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="Work" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="work" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="workId" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="work" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="initConfig">
+      <map>
+        <entry key="initConfig">
+          <value>
+            <Config>
+              <option name="daoPackage" value="qin.com.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$" />
+              <option name="modelPackage" value="qin.com.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$" />
+              <option name="name" value="initConfig" />
+              <option name="overrideXML" value="true" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="xmlPackage" value="qin.com.mapper" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$" />
+            </Config>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="users">
+      <map>
+        <entry key="jdbc:mysql://localhost:3306">
+          <value>
+            <User>
+              <option name="username" value="root" />
+            </User>
+          </value>
+        </entry>
+        <entry key="jdbc:mysql://localhost:3306/hcnu">
+          <value>
+            <User>
+              <option name="username" value="root" />
+            </User>
+          </value>
+        </entry>
+        <entry key="jdbc:mysql://localhost:3306/zy">
+          <value>
+            <User>
+              <option name="username" value="root" />
+            </User>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

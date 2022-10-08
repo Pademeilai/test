@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qin.com.mapper.ReaderDao">
+  <resultMap id="BaseResultMap" type="qin.com.entity.Reader">
+    <id column="readerId" jdbcType="INTEGER" property="readerid" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    readerId, `name`
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from reader
+    where readerId = #{readerid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from reader
+    where readerId = #{readerid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="readerId" keyProperty="readerid" parameterType="qin.com.entity.Reader" useGeneratedKeys="true">
+    insert into reader (`name`)
+    values (#{name,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="readerId" keyProperty="readerid" parameterType="qin.com.entity.Reader" useGeneratedKeys="true">
+    insert into reader
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        `name`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="qin.com.entity.Reader">
+    update reader
+    <set>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where readerId = #{readerid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="qin.com.entity.Reader">
+    update reader
+    set `name` = #{name,jdbcType=VARCHAR}
+    where readerId = #{readerid,jdbcType=INTEGER}
+  </update>
+</mapper>

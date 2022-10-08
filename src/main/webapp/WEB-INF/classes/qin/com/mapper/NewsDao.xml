@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qin.com.mapper.NewsDao">
+    <resultMap id="BaseResultMap" type="qin.com.entity.News">
+        <id column="newsId" jdbcType="INTEGER" property="newsid"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="author" jdbcType="VARCHAR" property="author"/>
+        <result column="userId" jdbcType="INTEGER" property="userid"/>
+        <result column="type" jdbcType="VARCHAR" property="type"/>
+        <result column="count" jdbcType="INTEGER" property="count"/>
+        <result column="like" jdbcType="INTEGER" property="like"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="date" jdbcType="TIMESTAMP" property="date"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        newsId, title, content, author, userId, `type`, `count`,`like`, remark, `date`
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from news
+        where newsId = #{newsid,jdbcType=INTEGER}
+    </select>
+    <select id="selectAllNews" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from news
+    </select>
+    <select id="selectMy" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from news where userId=#{userid,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from news
+    where newsId = #{newsid,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" keyColumn="newsId" keyProperty="newsid" parameterType="qin.com.entity.News"
+            useGeneratedKeys="true">
+    insert into news (title, content, author, 
+      userId,`like`, `type`, `count`,
+      remark, `date`)
+    values (#{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
+      #{userid,jdbcType=INTEGER},#{like,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER},
+      #{remark,jdbcType=VARCHAR}, #{date,jdbcType=TIMESTAMP})
+  </insert>
+    <insert id="insertSelective" keyColumn="newsId" keyProperty="newsid" parameterType="qin.com.entity.News"
+            useGeneratedKeys="true">
+        insert into news
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="title != null">
+                title,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="author != null">
+                author,
+            </if>
+            <if test="userid != null">
+                userId,
+            </if>
+            <if test="type != null">
+                `type`,
+            </if>
+            <if test="count != null">
+                `count`,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="date != null">
+                `date`,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="author != null">
+                #{author,jdbcType=VARCHAR},
+            </if>
+            <if test="userid != null">
+                #{userid,jdbcType=INTEGER},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="count != null">
+                #{count,jdbcType=INTEGER},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="date != null">
+                #{date,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="qin.com.entity.News">
+        update news
+        <set>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="content != null">
+                content = #{content,jdbcType=VARCHAR},
+            </if>
+            <if test="author != null">
+                author = #{author,jdbcType=VARCHAR},
+            </if>
+            <if test="userid != null">
+                userId = #{userid,jdbcType=INTEGER},
+            </if>
+            <if test="type != null">
+                `type` = #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="count != null">
+                `count` = #{count,jdbcType=INTEGER},
+            </if>
+            <if test="like != null">
+                `like` = `like`+1,
+            </if>
+            <if test="remark != null">
+                remark = #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="date != null">
+                `date` = #{date,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where newsId = #{newsid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="qin.com.entity.News">
+    update news
+    set `remark` = #{remark,jdbcType=VARCHAR}
+    where newsId = #{newsid,jdbcType=INTEGER}
+  </update>
+    <update id="count" parameterType="java.lang.Integer">
+    update news set count=count+1 where newsId=#{newsid,jdbcType=INTEGER};
+  </update>
+    <select id="selectMaxNew" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from news Order By date Desc;
+    </select>
+    <select id="selectOrderByCount" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from news Order By count Desc;
+    </select>
+    <select id="selectLike" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from news
+        <where>
+            <if test="_parameter!=null and _parameter !=''">
+                title like CONCAT('%',#{title,jdbcType=VARCHAR},'%');
+            </if>
+        </where>
+    </select>
+    <select id="selectAsk" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from news where type="提问";
+    </select>
+</mapper>

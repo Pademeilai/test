@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qin.com.mapper.MoneyDao">
+  <resultMap id="BaseResultMap" type="qin.com.entity.Money">
+    <id column="userId" jdbcType="INTEGER" property="userid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="day" jdbcType="DOUBLE" property="day" />
+    <result column="month" jdbcType="DOUBLE" property="month" />
+    <result column="year" jdbcType="DOUBLE" property="year" />
+    <result column="balance" jdbcType="INTEGER" property="balance" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    userId, username, `day`, `month`, `year`, balance
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    balance
+    from money
+    where userId = #{userid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from money
+    where userId = #{userid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="userId" keyProperty="userid" parameterType="qin.com.entity.Money" useGeneratedKeys="true">
+    insert into money (username, `day`, `month`, 
+      `year`, balance)
+    values (#{username,jdbcType=VARCHAR}, #{day,jdbcType=DOUBLE}, #{month,jdbcType=DOUBLE}, 
+      #{year,jdbcType=DOUBLE}, #{balance,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" keyColumn="userId" keyProperty="userid" parameterType="qin.com.entity.Money" useGeneratedKeys="true">
+    insert into money
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="username != null">
+        username,
+      </if>
+      <if test="day != null">
+        `day`,
+      </if>
+      <if test="month != null">
+        `month`,
+      </if>
+      <if test="year != null">
+        `year`,
+      </if>
+      <if test="balance != null">
+        balance,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="day != null">
+        #{day,jdbcType=DOUBLE},
+      </if>
+      <if test="month != null">
+        #{month,jdbcType=DOUBLE},
+      </if>
+      <if test="year != null">
+        #{year,jdbcType=DOUBLE},
+      </if>
+      <if test="balance != null">
+        #{balance,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="qin.com.entity.Money">
+    update money
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="day != null">
+        `day` = #{day,jdbcType=DOUBLE},
+      </if>
+      <if test="month != null">
+        `month` = #{month,jdbcType=DOUBLE},
+      </if>
+      <if test="year != null">
+        `year` = #{year,jdbcType=DOUBLE},
+      </if>
+      <if test="balance != null">
+        balance = #{balance,jdbcType=INTEGER},
+      </if>
+    </set>
+    where userId = #{userid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="qin.com.entity.Money">
+    update money
+    set
+      balance = money.balance+#{balance,jdbcType=INTEGER}
+    where userId = #{userid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey1" parameterType="qin.com.entity.Money">
+    update money
+    set
+      balance = money.balance-#{balance,jdbcType=INTEGER}
+    where userId = #{userid,jdbcType=INTEGER}
+  </update>
+
+</mapper>

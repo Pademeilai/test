@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qin.com.mapper.ChatDao">
+  <resultMap id="BaseResultMap" type="qin.com.entity.Chat">
+    <id column="chatId" jdbcType="INTEGER" property="chatid" />
+    <result column="userId" jdbcType="INTEGER" property="userid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="date" jdbcType="DATE" property="date" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <result column="bookid" jdbcType="LONGVARCHAR" property="bookid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    chatId, userId, username, `date`,content,bookid
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from chat
+    where chatId = #{chatid,jdbcType=INTEGER}
+  </select>
+  <select id="selectNews"  resultType="java.lang.Integer">
+    select chatId from chat order by chatId DESC limit 1
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from chat
+    where chatId = #{chatid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="chatId" keyProperty="chatid" parameterType="qin.com.entity.Chat" useGeneratedKeys="true">
+    insert into chat (userId, username, `date`, 
+      content,bookid)
+    values (#{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{date,jdbcType=DATE}, 
+      #{content,jdbcType=LONGVARCHAR},#{bookid,jdbcType=LONGVARCHAR})
+  </insert>
+
+</mapper>

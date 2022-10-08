@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qin.com.mapper.MyhomeDao">
+    <resultMap id="BaseResultMap" type="qin.com.entity.Myhome">
+        <id column="myhomeid" jdbcType="INTEGER" property="myhomeid"/>
+        <result column="userid" jdbcType="INTEGER" property="userid"/>
+        <result column="bookname" jdbcType="VARCHAR" property="bookname"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+        <result column="bookid" jdbcType="INTEGER" property="bookid"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    myhomeid, userid, bookname, url,bookid
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from myhome
+        where userid = #{userid,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from myhome
+    where myhomeid = #{myhomeid,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" keyColumn="myhomeid" keyProperty="myhomeid" parameterType="qin.com.entity.Myhome"
+            useGeneratedKeys="true">
+    insert into myhome (userid, bookname, url
+      )
+    values (#{userid,jdbcType=INTEGER}, #{bookname,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}
+      )
+  </insert>
+    <insert id="insertSelective" keyColumn="myhomeid" keyProperty="myhomeid" parameterType="qin.com.entity.Myhome"
+            useGeneratedKeys="true">
+        insert into myhome
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userid != null">
+                userid,
+            </if>
+            <if test="bookname != null">
+                bookname,
+            </if>
+            <if test="url != null">
+                url,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userid != null">
+                #{userid,jdbcType=INTEGER},
+            </if>
+            <if test="bookname != null">
+                #{bookname,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                #{url,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="qin.com.entity.Myhome">
+        update myhome
+        <set>
+            <if test="userid != null">
+                userid = #{userid,jdbcType=INTEGER},
+            </if>
+            <if test="bookname != null">
+                bookname = #{bookname,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                url = #{url,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where myhomeid = #{myhomeid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="qin.com.entity.Myhome">
+    update myhome
+    set userid = #{userid,jdbcType=INTEGER},
+      bookname = #{bookname,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR}
+    where myhomeid = #{myhomeid,jdbcType=INTEGER}
+  </update>
+</mapper>

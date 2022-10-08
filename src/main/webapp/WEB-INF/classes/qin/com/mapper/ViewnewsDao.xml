@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qin.com.mapper.ViewnewsDao">
+  <resultMap id="BaseResultMap" type="qin.com.entity.Viewnews">
+    <id column="viewnewsId" jdbcType="VARCHAR" property="viewnewsid" />
+    <id column="username" jdbcType="VARCHAR" property="username" />
+    <result column="newsId" jdbcType="INTEGER" property="newsid" />
+    <result column="titel" jdbcType="VARCHAR" property="titel" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="time" jdbcType="VARCHAR" property="time" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    viewnewsId,username, newsId, titel, content, remark,time
+  </sql>
+  <select id="selectall"  resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from viewnews
+    where remark = '被举报'
+  </select>
+  <select id="selectnews" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from viewnews
+    where newsId = #{newsid,jdbcType=INTEGER}
+  </select>
+  <insert id="insert"  parameterType="qin.com.entity.Viewnews">
+    insert into viewnews (username,newsId, titel, content,
+      remark,time)
+    values (#{username,jdbcType=VARCHAR},#{newsid,jdbcType=INTEGER}, #{titel,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR},
+      #{remark,jdbcType=VARCHAR},#{time,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="qin.com.entity.Viewnews">
+    update viewnews
+    set remark = #{remark,jdbcType=VARCHAR}
+    where viewnewsId = #{viewnewsid,jdbcType=INTEGER}
+  </update>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from viewnews
+    where viewnewsId = #{viewnewsId,jdbcType=INTEGER}
+  </delete>
+</mapper>
