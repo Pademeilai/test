@@ -7,16 +7,21 @@
 第二步：在git bash 中cd到我们本地项目所在的文件夹地址；
 
 接下来是在我们的git bash中输入命令
-1、git init      初始化一个git本地仓库
 
-2、git add .     把项目文件添加到本地仓库   .的意思是把本地的所有文件加入到仓库
+1、git init     
+初始化一个git本地仓库
 
-3、git commit -m 'this is first commit'   提交的文件注释说明，最好说明一下，否则有时候会出错!
+2、git add .     
+把项目文件添加到本地仓库   .的意思是把本地的所有文件加入到仓库
+
+3、git commit -m 'this is first commit'   
+提交的文件注释说明，最好说明一下，否则有时候会出错!
 
 4、git remote add origin https://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@github.com/Pademeilai/test.git   
 本地仓库关联GitHub上的仓库，url的书写格式是：https://令牌@github.com/账号/仓库名.git
 
-5、git push -u origin master 将代码提交到GitHub
+5、git push -u origin master 
+将代码提交到GitHub
 
 6、输入账号密码搞定。
 
